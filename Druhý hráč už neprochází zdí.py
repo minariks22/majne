@@ -13,9 +13,9 @@ FPS = 60
 CERNA_BARVA = (0, 0, 0)   
 BILA_BARVA = (255, 255, 255)   
 pozadi_pozice = [10, 10]   
-pozadi_obrazek = pygame.image.load('C:/Users/PC/Downloads/Dráha.png')  
-obrazek = pygame.image.load("C:/Users/PC/Downloads/Panacek 2.png")   
-jarda = pygame.image.load('C:/Users/PC/Downloads/Jarda2.png')  
+pozadi_obrazek = pygame.image.load('Dráha.png')  
+obrazek = pygame.image.load("Panacek 2.png")   
+jarda = pygame.image.load('Jarda2.png')  
  
 velikost = 50  
 vyska = 50   
@@ -72,7 +72,32 @@ while True:
         position_x = 0
     if position_y < 0:
         position_y = 0
-       
+    if pozice_x > ROZLISENI_X - velikost:   
+        pozice_x = ROZLISENI_X - velikost   
+    if pozice_y > ROZLISENI_Y - velikost:   
+        pozice_y = ROZLISENI_Y - velikost   
+    if pozice_x < -1:   
+        pozice_x = -1   
+    if pozice_y < -1:   
+        pozice_y = -1   
+    if position_x > ROZLISENI_X - vyska:
+        position_x = ROZLISENI_X - vyska
+    if position_y > ROZLISENI_Y - vyska:
+        position_y = ROZLISENI_Y - vyska
+    if position_x < -1:
+        position_x = -1
+    if position_y < -1:
+        position_y = -1
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     okno.fill(BILA_BARVA)   
        
        
